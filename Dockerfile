@@ -17,9 +17,10 @@ RUN apk add --update openssl bash git build-base m4 autoconf automake libtool &&
     cd .. && \
 	git clone https://github.com/grpc/grpc-java.git && \
 	cd grpc-java/compiler && \
+	git co tags/v0.7.2 && \
 	ln -s /usr/local/include/google /usr/include/google && \
 	../gradlew java_pluginExecutable && \
-	cp -r build/binaries/java_pluginExecutable /usr/local/bin
+	cp -r build/binaries/java_pluginExecutable/* /usr/local/bin/
 
 VOLUME /build
 
