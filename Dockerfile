@@ -1,4 +1,4 @@
-FROM quay.io/opsee/build-java
+FROM quay.io/opsee/build-base
 MAINTAINER Cliff Moon <cliff@opsee.co>
 
 ENV LEIN_ROOT true
