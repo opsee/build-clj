@@ -8,7 +8,7 @@ RUN wget https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein
 	lein && \
 	git clone https://github.com/grpc/grpc-java.git && \
 	cd grpc-java/compiler && \
-	git co tags/v0.7.2 && \
+	git checkout tags/v0.7.2 && \
 	ln -s /usr/local/include/google /usr/include/google && \
 	../gradlew java_pluginExecutable && \
 	cp -r build/binaries/java_pluginExecutable/* /usr/local/bin/
