@@ -7,4 +7,10 @@ if [ -x build.sh ]; then
 	./build.sh
 fi
 
+lein midje
+if [ $? -ne 0 ]; then
+	echo "Tests failed -- bailing out..."
+	exit 1
+fi
+
 lein uberjar
