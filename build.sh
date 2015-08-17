@@ -7,6 +7,11 @@ if [ -x build.sh ]; then
 	./build.sh
 fi
 
+if [ "$1" = "nobuild" ]; then
+	echo "Not building the project."
+	exit 0
+fi
+
 lein midje
 if [ $? -ne 0 ]; then
 	echo "Tests failed -- bailing out..."
