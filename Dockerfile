@@ -11,7 +11,8 @@ RUN wget https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein
 	git checkout tags/v0.7.2 && \
 	ln -s /usr/local/include/google /usr/include/google && \
 	../gradlew java_pluginExecutable && \
-	cp -r build/binaries/java_pluginExecutable/* /usr/local/bin/
+	cp -r build/binaries/java_pluginExecutable/* /usr/local/bin/ && \
+  git clone https://github.com/gogo/protobuf.git /usr/local/include/github.com/gogo/protobuf
 
 COPY build.sh /build.sh
 
